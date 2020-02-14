@@ -1,8 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { toast } from "react-toastify";
 
+const notifyMe = () =>
+  toast.success("All Done right now!", {
+    position: toast.POSITION.TOP_RIGHT
+  });
 function App() {
+  const notify = () => toast("Wow so easy !");
+
   return (
     <div className="App">
       <header className="App-header">
@@ -19,6 +26,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <button onClick={() => notifyMe()}>Click me to Nofity you!</button>
     </div>
   );
 }
